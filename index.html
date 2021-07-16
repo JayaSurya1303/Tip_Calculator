@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="full-container">
+  <div class="img-container">
+    <img src="./images/logo.svg" class="img-fluid logo" alt="logo">
+  </div>
+  <div class="card-container">
+    <section class="top-container">
+      <div class="value-check">
+        <label for="bill">Bill</label>
+        <img src="./images/icon-dollar.svg" alt="dollar">
+        <input type="number" min="1" name="bill" class="bill" id="bill" placeholder="0">
+      </div>
+      <div class="tip-percent">
+        <label>Select Tip %</label>
+        <div class="tip-button">
+          <div class="row">
+            <div class="col">
+              <button class="btn tipBtn" value="5">5%</button>
+            </div>
+            <div class="col">
+              <button class="btn tipBtn" value="10">10%</button>
+            </div>
+            <div class="col">
+              <button class="btn tipBtn" value="15">15%</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+            <button class="btn tipBtn" value="25">25%</button>
+            </div>
+            <div class="col">
+              <button class="btn tipBtn" value="50">50%</button>
+            </div>
+            <div class="col">
+              <input type="number" min="1" max="100" name="number" id="number" class="number tipBtn" placeholder="custom">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="value-check">
+        <label for="people">Number of People <small>Error Message</small></label>
+        <img src="./images/icon-person.svg" alt="person">
+        <input type="number" min="1" name="people" id="people" class="people" placeholder="0">
+      </div>
+    </section>
+    <section class="bottom-container">
+      <div class="tip-container">
+        <div class="tip-info">
+          <h5>Tip Amount</h5>
+          <h6>/ person</h6>
+        </div>
+        <div id="tipAmount">$0.00</div>
+      </div>
+      <div class="price-container">
+        <div class="price-info">
+          <h5>Total</h5>
+          <h6>/ person</h6>
+        </div>
+        <div id="priceAmount">$0.00</div>
+      </div>
+      <button class="btn" id="reset">RESET</button>
+    </section>
+    
+  </div>
+</div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
